@@ -1,0 +1,7 @@
+- Learn Binance UI
+- Implement mock components for each UI element that run it and output the responses
+- Write .js file that invokes them with parameters
+- Build UI
+- Style it to be functional.
+- Hook UI into .js calls
+- Style it to look cool.
