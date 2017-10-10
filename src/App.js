@@ -44,34 +44,41 @@ class App extends Component {
             <div className="order">
               <h3>Order</h3>
               <div className="order__tools">
-                <div className="order__tools__buy">
-                  <div className="order__tools__buy__head-line">
-                    <div className="order__tools__buy__head-line__buy-token-message">
+                <div className="order__tools__selection">
+                  <a className="order__tools__selection__buy" href="#">Buy</a>
+                  <a className="order__tools__selection__sell" href="#">Sell</a>
+                </div>
+                <div className="order__tools__form">
+                  <div className="order__tools__form__head-line">
+                    <div className="order__tools__form__head-line__buy-token-message">
                       Buy ETH
                     </div>
-                    <div className="order__tools__buy__head-line__available-market-currency">
+                    <div className="order__tools__form__head-line__available-market-currency">
                       Ƀ 2.5 available
                     </div>
                   </div>
-                  <div className="order__tools__buy__fields">
-                    <div className="order__tools__buy__fields__field">
-                      <span class="order__tools__buy__fields__field__label">Units</span>
+                  <div className="order__tools__form__fields">
+                    <div className="order__tools__form__fields__field">
+                      <span class="order__tools__form__fields__field__label">Units</span>
                       <input type="text" defaultValue="5020" />
-                      <span className="order__tools__buy__fields__field__currency-abbreviation">ETH</span>
+                      <span className="order__tools__form__fields__field__currency-abbreviation">ETH</span>
                     </div>
-                    <div className="order__tools__buy__fields__field">
-                      <span class="order__tools__buy__fields__field__label">Rate</span>
+                    <div className="order__tools__form__fields__field">
+                      <span class="order__tools__form__fields__field__label">Rate</span>
                       <input type="text" defaultValue="0.51" />
-                      <span className="order__tools__buy__fields__field__currency-abbreviation">Ƀ per unit</span>
-                      <a href="#" className="order__tools__buy__fields__field__limit">Limit</a>
-                      <a href="#" className="order__tools__buy__fields__field__market">Market</a>
+                      <span className="order__tools__form__fields__field__currency-abbreviation">Ƀ per unit</span>
+                      <a href="#" className="order__tools__form__fields__field__limit">Limit</a>
+                      <a href="#" className="order__tools__form__fields__field__market">Market</a>
                     </div>
-                    <div className="order__tools__buy__fields__field">
-                      <span class="order__tools__buy__fields__field__label">Total</span>
+                    <div className="order__tools__form__fields__field">
+                      <span class="order__tools__form__fields__field__label">Total</span>
                       <input type="text" defaultValue="2560.20" />
-                      <span className="order__tools__buy__fields__field__currency-abbreviation">Ƀ</span>
+                      <span className="order__tools__form__fields__field__currency-abbreviation">Ƀ</span>
                     </div>
                   </div>
+                </div>
+                <div className="order__tools__selection__submit-order">
+                  <a href="#" className="order__tools__selection__submit-order__button">Submit</a>
                 </div>
               </div>
             </div>

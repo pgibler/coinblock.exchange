@@ -1,12 +1,50 @@
+html {
+  --transparent-container-background: rgba(40, 40, 140, .5);
+  --light-gray: rgb(128, 128, 128);
+}
+
+a:link {
+  color: black;
+  background-color: white;
+  border: none;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+  border-left: 1px solid white;
+  border-bottom: 1px solid white;
+  flex: 1;
+}
+
+a:visited {
+  color: black;
+  background-color: white;
+}
+
+a:hover {
+  color: black;
+  background-color: #989898;
+}
+
+a:active {
+  color: white;
+  background-color: black;
+}
+
 h3 {
   font-weight: initial;
 }
 
 body {
-  background: #808080;
   color: white;
   height: 100vh;
   display: flex;
+  background: linear-gradient(0deg, rgba(128,128,128,0.5), rgba(128,128,128,0.5)), url('/background.jpg') repeat;
+  background-size: 20%;
 }
 
 input {
@@ -86,7 +124,7 @@ input {
 }
 
 .coin-info {
-  background-color: rgba(0,0,255,.05);
+  background-color: var(--transparent-container-background);
   padding: 30px;
   display: flex;
   flex-direction: row;
@@ -188,38 +226,53 @@ input {
   margin-right: 30px;
 }
 
-.order__tools__buy {
+.order__tools__selection {
+  display: flex;
+}
+
+.order__tools__selection__buy,
+.order__tools__selection__sell {
+  flex: 1;
+  padding: 20px;
+  background: white;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: black;
+  font-size: 32px;
+}
+
+.order__tools__form {
   display: flex;
   flex-direction: column;
   flex: 1;
 }
 
-.order__tools__buy__head-line {
+.order__tools__form__head-line {
   display: flex;
   flex-direction: row;
   padding: 10px;
-  background: rgba(0,0,255,.05);
+  background: var(--transparent-container-background);
 }
 
-.order__tools__buy__head-line > div {
+.order__tools__form__head-line > div {
   flex: 1;
 }
 
-.order__tools__buy__fields {
+.order__tools__form__fields {
   flex: 1;
   padding: 10px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
-.order__tools__buy__fields__field {
+.order__tools__form__fields__field {
   display: flex;
   flex-direction: row;
 }
 
-.order__tools__buy__fields__field__currency-abbreviation {
+.order__tools__form__fields__field__currency-abbreviation {
   color: #FFFFFF;
-  background-color: rgba(0,0,255,.05);
+  background-color: var(--transparent-container-background);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -228,15 +281,15 @@ input {
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-.order__tools__buy__fields__field__limit {
+.order__tools__form__fields__field__limit {
   margin: 5px;
 }
 
-.order__tools__buy__fields__field__market {
+.order__tools__form__fields__field__market {
   margin: 5px;
 }
 
-.order__tools__buy__fields__field__label {
+.order__tools__form__fields__field__label {
   width: 50px;
   padding: 10px;
   display: flex;
@@ -244,7 +297,7 @@ input {
   align-items: center;
 }
 
-.order__tools__buy__fields__field input {
+.order__tools__form__fields__field input {
   flex: 1;
   height: 20px;
   font-size: 24px;
@@ -252,41 +305,23 @@ input {
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-.order__tools__buy__fields__field a:link {
-  color: black;
-  background-color: white;
-  border: none;
-  padding: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
-.order__tools__buy__fields__field a:visited {
-  color: black;
-  background-color: white;
-}
-
-.order__tools__buy__fields__field a:hover {
-  color: black;
-  background-color: #989898;
-}
-
-.order__tools__buy__fields__field a:active {
+.order__tools__form__fields__field a:active {
   color: white;
   background-color: black;
 }
 
-.order__tools__buy__head-line__buy-token-message {
+.order__tools__form__head-line__buy-token-message {
   text-align: left;
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-.order__tools__buy__head-line__available-market-currency {
+.order__tools__form__head-line__available-market-currency {
   text-align: right;
   font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.order__tools__selection__submit-order__button {
+  font-size: 32px;
 }
 
 .positions-and-orders {
