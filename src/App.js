@@ -8,6 +8,9 @@ class App extends Component {
   render() {
     return (
       <div className="app">
+        <video className="app__background-video" loop autoPlay>
+          <source src="http://design.enter-media.org/upload/iblock/5e4/5e4c2cfea12f0398d79570fd28c37822.webm" type="video/webm" />
+        </video>
         <header className="app__header">
           <h1 className="app__header__title">coinblock.exchange</h1>
           {/* <div className="app__header__currency-toggle">
