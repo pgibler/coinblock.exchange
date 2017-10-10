@@ -20,7 +20,7 @@ class App extends Component {
             <img className="coin-info__image" src="ethereum.png" />
             <div className="coin-info__identifier">
               <div className="coin-info__identifier__name">Ethereum</div>
-              <input type="text" className="coin-info__identifier__symbol" value="ETH/BTC" />
+              <input type="text" className="coin-info__identifier__symbol" defaultValue="ETH/BTC" />
             </div>
             <div className="coin-info__values">
               <div className="coin-info__values__last">
@@ -32,19 +32,47 @@ class App extends Component {
                 <div className="coin-info__values__volume__value">Ƀ 5132.03</div>
               </div>
             </div>
-            <img className="coin-info__graph" src="line_chart.png" />
+            <div class="coin-info__values__charts">
+              <img class="coin-info__values__charts__link" src="https://datavizcatalogue.com/methods/images/top_images/SVG/candlestick_chart.svg" />
+            </div>
           </div>
           <div className="app__panel__bottom">
             <div className="tickers">
               <h3>Tickers</h3>
-              <div className="tickers-list">
-              </div>
+              <div className="tickers__list"></div>
             </div>
             <div className="order">
               <h3>Order</h3>
-              <div className="order__mode">
-                <button>Buy</button>
-                <button>Sell</button>
+              <div className="order__tools">
+                <div className="order__tools__buy">
+                  <div className="order__tools__buy__head-line">
+                    <div className="order__tools__buy__head-line__buy-token-message">
+                      Buy ETH
+                    </div>
+                    <div className="order__tools__buy__head-line__available-market-currency">
+                      Ƀ 2.5 available
+                    </div>
+                  </div>
+                  <div className="order__tools__buy__fields">
+                    <div className="order__tools__buy__fields__field">
+                      <span class="order__tools__buy__fields__field__label">Units</span>
+                      <input type="text" defaultValue="5020" />
+                      <span className="order__tools__buy__fields__field__currency-abbreviation">ETH</span>
+                    </div>
+                    <div className="order__tools__buy__fields__field">
+                      <span class="order__tools__buy__fields__field__label">Rate</span>
+                      <input type="text" defaultValue="0.51" />
+                      <span className="order__tools__buy__fields__field__currency-abbreviation">Ƀ per unit</span>
+                      <a href="#" className="order__tools__buy__fields__field__limit">Limit</a>
+                      <a href="#" className="order__tools__buy__fields__field__market">Market</a>
+                    </div>
+                    <div className="order__tools__buy__fields__field">
+                      <span class="order__tools__buy__fields__field__label">Total</span>
+                      <input type="text" defaultValue="2560.20" />
+                      <span className="order__tools__buy__fields__field__currency-abbreviation">Ƀ</span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
             <div className="positions-and-orders">
