@@ -32,8 +32,8 @@ class App extends Component {
                 <div className="coin-info__values__volume__value">Ƀ 5132.03</div>
               </div>
             </div>
-            <div class="coin-info__values__charts">
-              <img class="coin-info__values__charts__link" src="https://datavizcatalogue.com/methods/images/top_images/SVG/candlestick_chart.svg" />
+            <div className="coin-info__values__charts">
+              <img className="coin-info__values__charts__link" src="https://datavizcatalogue.com/methods/images/top_images/SVG/candlestick_chart.svg" />
             </div>
           </div>
           <div className="app__panel__bottom">
@@ -59,19 +59,19 @@ class App extends Component {
                   </div>
                   <div className="order__tools__form__fields">
                     <div className="order__tools__form__fields__field">
-                      <span class="order__tools__form__fields__field__label">Units</span>
+                      <span className="order__tools__form__fields__field__label">Units</span>
                       <input type="text" defaultValue="5020" />
                       <span className="order__tools__form__fields__field__currency-abbreviation">ETH</span>
                     </div>
                     <div className="order__tools__form__fields__field">
-                      <span class="order__tools__form__fields__field__label">Rate</span>
+                      <span className="order__tools__form__fields__field__label">Rate</span>
                       <input type="text" defaultValue="0.51" />
                       <span className="order__tools__form__fields__field__currency-abbreviation">Ƀ per unit</span>
                       <a href="#" className="order__tools__form__fields__field__limit">Limit</a>
                       <a href="#" className="order__tools__form__fields__field__market">Market</a>
                     </div>
                     <div className="order__tools__form__fields__field">
-                      <span class="order__tools__form__fields__field__label">Total</span>
+                      <span className="order__tools__form__fields__field__label">Total</span>
                       <input type="text" defaultValue="2560.20" />
                       <span className="order__tools__form__fields__field__currency-abbreviation">Ƀ</span>
                     </div>
