@@ -1,0 +1,73 @@
+.coin-info {
+  background: linear-gradient(var(--dark-transparent-blue), var(--light-transparent-blue));
+  padding: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.coin-info > * {
+  flex: 1;
+}
+
+.coin-info__image {
+  max-width: 120px;
+  max-height: 120px;
+}
+
+.coin-info__values {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.coin-info__identifier {
+  flex: .2;
+}
+
+.coin-info__identifier,
+.coin-info__values__price,
+.coin-info__values__volume {
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.coin-info__identifier__name,
+.coin-info__values__price__title,
+.coin-info__values__volume__title {
+  padding-bottom: 10px;
+  font-size: 16px;
+}
+
+.coin-info__identifier__name {
+  flex: 0;
+}
+
+.coin-info__identifier__symbol {
+  font-size: 14px;
+  text-align: center;
+  width: 65px;
+}
+
+.coin-info__values__price__value,
+.coin-info__values__volume__value {
+  font-size: 32px;
+  font-family: var(--fancy-font);
+  color: white;
+}
+
+.coin-info__values__charts {
+  flex: 0;
+  background-color: var(--coinblock-exchange-gray);
+}
+
+
+.coin-info__values__charts__link {
+  max-width: 275px;
+}

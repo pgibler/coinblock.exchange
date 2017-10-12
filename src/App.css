@@ -5,8 +5,8 @@ html {
   --light-gray: rgb(128, 128, 128);
   --coinblock-exchange-gray: rgb(34, 34, 34, .9);
   --coinblock-exchange-gray-transparent: rgba(34, 34, 34,.1);
-  --purple: rgb(153, 33, 153);
-  --dark--purple: rgb(87, 34, 87);
+  --purple: rgb(220, 73, 220);
+  --dark--purple: rgb(230, 0, 230);
   --system-font: "Courier New", Courier, monospace;
   --fancy-font: Georgia, 'Times New Roman', Times, serif;
 }
@@ -145,7 +145,8 @@ video.app__background-video {
 }
 
 .app__panel {
-  max-height: 650px;
+  min-height: 600px;
+  max-height: 640px;
   width: 1150px;
   padding: 30px;
   flex: 1;
@@ -177,80 +178,6 @@ video.app__background-video {
   flex: .1;
   width: 100vw;
   background-color: var(--coinblock-exchange-gray);
-}
-
-.coin-info {
-  background: linear-gradient(var(--dark-transparent-blue), var(--light-transparent-blue));
-  padding: 30px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
-.coin-info > * {
-  flex: 1;
-}
-
-.coin-info__image {
-  max-width: 120px;
-  max-height: 120px;
-}
-
-.coin-info__values {
-  display: flex;
-  flex-direction: row;
-  flex: 1;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-.coin-info__identifier {
-  flex: .2;
-}
-
-.coin-info__identifier,
-.coin-info__values__price,
-.coin-info__values__volume {
-  display: flex;
-  padding: 20px;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.coin-info__identifier__name,
-.coin-info__values__price__title,
-.coin-info__values__volume__title {
-  padding-bottom: 10px;
-  font-size: 16px;
-}
-
-.coin-info__identifier__name {
-  flex: 0;
-}
-
-.coin-info__identifier__symbol {
-  font-size: 14px;
-  text-align: center;
-  width: 65px;
-}
-
-.coin-info__values__price__value,
-.coin-info__values__volume__value {
-  font-size: 32px;
-  font-family: var(--fancy-font);
-  color: white;
-}
-
-.coin-info__values__charts {
-  flex: 0;
-  background-color: var(--coinblock-exchange-gray);
-}
-
-
-.coin-info__values__charts__link {
-  max-width: 275px;
 }
 
 .tickers {
@@ -428,7 +355,7 @@ video.app__background-video {
   flex: 1;
   height: 20px;
   font-size: 24px;
-  padding: 10px;
+  padding: 8px;
   font-family: var(--fancy-font);
 }
 

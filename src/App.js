@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import DepthWebsocketEmitter from './DepthWebsocketEmitter.js';
-import SelectedTicker from './SelectedTicker';
-import AvailableTickers from './AvailableTickers';
+import CoinInfo from './CoinInfo.js';
 
 class App extends Component {
   render() {
@@ -19,26 +18,7 @@ class App extends Component {
           </div> */}
         </header>
         <div className="app__panel">
-          <div className="coin-info lightup-decoration">
-            <img className="coin-info__image" src="ethereum.png" />
-            <div className="coin-info__identifier">
-              <div className="coin-info__identifier__name">Ethereum</div>
-              <input type="text" className="coin-info__identifier__symbol" defaultValue="ETH/BTC" />
-            </div>
-            <div className="coin-info__values">
-              <div className="coin-info__values__price">
-                <div className="coin-info__values__price__title">Price</div>
-                <div className="coin-info__values__price__value">Ƀ 0.06345826</div>
-              </div>
-              <div className="coin-info__values__volume">
-                <div className="coin-info__values__volume__title">Volume</div>
-                <div className="coin-info__values__volume__value">Ƀ 2671.817</div>
-              </div>
-            </div>
-            <div className="coin-info__values__charts">
-              <img className="coin-info__values__charts__link" src="https://datavizcatalogue.com/methods/images/top_images/SVG/candlestick_chart.svg" />
-            </div>
-          </div>
+          <CoinInfo tickerSymbol="ethbtc" />
           <div className="app__panel__bottom">
             <div className="tickers lightup-decoration">
               <h3>Tickers</h3>
