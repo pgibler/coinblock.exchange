@@ -1,12 +1,19 @@
 html {
-  --transparent-container-background: rgba(168, 210, 220, 0.05);
+  --dark-transparent-blue: rgba(168, 210, 220, 0.05);
+  --light-transparent-blue: rgba(176, 214, 223, .01);
+  --light-transparent-gray: rgba(128, 128, 128, 0.01);
   --light-gray: rgb(128, 128, 128);
   --coinblock-exchange-gray: rgb(34, 34, 34, .9);
+  --coinblock-exchange-gray-transparent: rgba(34, 34, 34,.1);
+  --purple: rgb(153, 33, 153);
+  --dark--purple: rgb(87, 34, 87);
+  --system-font: "Courier New", Courier, monospace;
+  --fancy-font: Georgia, 'Times New Roman', Times, serif;
 }
 
 a:link {
   color: white;
-  background: linear-gradient(0deg, var(--transparent-container-background), rgba(34, 34, 34,.1) 80%);
+  background: linear-gradient(0deg, var(--dark-transparent-blue), var(--light-transparent-blue) 80%);
   border: none;
   padding: 5px;
   display: flex;
@@ -30,7 +37,7 @@ a:visited {
 a:hover {
   color: white;
   background-color: rgba(0,0,0,.1);
-  border-top: 1px solid var(--transparent-container-background);
+  border-top: 1px solid var(--dark-transparent-blue);
   border-right: 1px solid var(--coinblock-exchange-gray);
   border-bottom: 1px solid transparent;
 }
@@ -65,6 +72,18 @@ input {
   border-color: #989898;
 }
 
+/* Transition decorations */
+
+.lightup-decoration {
+  filter: brightness(100%);
+}
+
+.lightup-decoration:hover {
+  filter: brightness(110%);
+}
+
+/* Main app */
+
 #root {
   width: 100vw;
   flex: 1;
@@ -77,7 +96,7 @@ input {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: rgba(26, 23, 34, 0.95);
+  background: rgba(0, 0, 5, 0.85);
 }
 
 video.app__background-video {
@@ -111,7 +130,7 @@ video.app__background-video {
 
 .app__header__title {
   font-size: 1.5em;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: var(--fancy-font);
 }
 
 .app__header__currency-toggle {
@@ -126,7 +145,7 @@ video.app__background-video {
 }
 
 .app__panel {
-  height: 550px;
+  max-height: 650px;
   width: 1150px;
   padding: 30px;
   flex: 1;
@@ -141,9 +160,14 @@ video.app__background-video {
   flex-direction: row;
 }
 
+.app__panel__bottom > div {
+  margin: 10px;
+}
+
 .app__panel__bottom h3 {
   margin-top: 0px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin-bottom: 15px;
+  font-family: var(--fancy-font);
 }
 
 .app_footer {
@@ -156,7 +180,7 @@ video.app__background-video {
 }
 
 .coin-info {
-  background-color: var(--transparent-container-background);
+  background: linear-gradient(var(--dark-transparent-blue), var(--light-transparent-blue));
   padding: 30px;
   display: flex;
   flex-direction: row;
@@ -171,7 +195,6 @@ video.app__background-video {
 .coin-info__image {
   max-width: 120px;
   max-height: 120px;
-  background: white;
 }
 
 .coin-info__values {
@@ -187,7 +210,7 @@ video.app__background-video {
 }
 
 .coin-info__identifier,
-.coin-info__values__last,
+.coin-info__values__price,
 .coin-info__values__volume {
   display: flex;
   padding: 20px;
@@ -197,7 +220,7 @@ video.app__background-video {
 }
 
 .coin-info__identifier__name,
-.coin-info__values__last__title,
+.coin-info__values__price__title,
 .coin-info__values__volume__title {
   padding-bottom: 10px;
   font-size: 16px;
@@ -213,10 +236,10 @@ video.app__background-video {
   width: 65px;
 }
 
-.coin-info__values__last__value,
+.coin-info__values__price__value,
 .coin-info__values__volume__value {
   font-size: 32px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: var(--fancy-font);
   color: white;
 }
 
@@ -234,29 +257,80 @@ video.app__background-video {
   flex: 1;
   display: flex;
   flex-direction: column;
+  padding: 10px;
+  background-color: var(--light-transparent-blue);
 }
 
-.tickers__list {
+.data__list {
   border-top: 1px solid black;
   border-right: 1px solid black;
   border-left: 1px solid white;
   border-bottom: 1px solid white;
   flex: 1;
-  background: purple;
+  overflow: hidden;
+  background: var(--dark--purple);
+  font-family: var(--system-font);
+}
+
+.data__list__header {
+  background: var(--dark--purple);
+  font-weight: bold;
+}
+
+.data__list__ticker:nth-child(even) {
+  background: var(--purple);
+}
+
+.data__list__ticker:nth-child(odd) {
+  background: var(--dark--purple);
+}
+
+.data__list__header,
+.data__list__ticker {
+  text-align: left;
+}
+
+.data__list__header {
+  display: flex;
+  flex-direction: row;
+  font-size: 12px;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2px;
+  text-align: center;
+}
+
+.data__list__header > div,
+.data__list__ticker > div {
+  flex: 1;
+}
+
+.data__list__ticker {
+  display: flex;
+  flex-direction: row;
+  font-size: 12px;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2px;
+}
+
+.data__list__header > div {
+  text-align: left;
 }
 
 .order {
-  flex: 2;
+  flex: 1;
+  width: 480px;
   display: flex;
   flex-direction: column;
+  padding: 10px;
+  background-color: var(--light-transparent-blue);
 }
 
 .order__tools {
   display: flex;
   flex-direction: column;
   flex: 1;
-  margin-left: 30px;
-  margin-right: 30px;
 }
 
 .order__tools__selection {
@@ -298,7 +372,7 @@ video.app__background-video {
   display: flex;
   flex-direction: row;
   padding: 10px;
-  background: var(--transparent-container-background);
+  background: var(--dark-transparent-blue);
 }
 
 .order__tools__form__head-line > div {
@@ -310,7 +384,8 @@ video.app__background-video {
   padding: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
+  background-color: var(--light-transparent-gray);
 }
 
 .order__tools__form__fields__field {
@@ -318,15 +393,19 @@ video.app__background-video {
   flex-direction: row;
 }
 
+.order__tools__form__fields__field__rate {
+  width: 130px;
+}
+
 .order__tools__form__fields__field__currency-abbreviation {
   color: #FFFFFF;
-  background-color: var(--transparent-container-background);
+  background-color: var(--dark-transparent-blue);
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 10px;
   white-space: nowrap;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: var(--fancy-font);
 }
 
 .order__tools__form__fields__field__limit {
@@ -350,7 +429,7 @@ video.app__background-video {
   height: 20px;
   font-size: 24px;
   padding: 10px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: var(--fancy-font);
 }
 
 .order__tools__form__fields__field a:active {
@@ -360,12 +439,12 @@ video.app__background-video {
 
 .order__tools__form__head-line__buy-token-message {
   text-align: left;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: var(--fancy-font);
 }
 
 .order__tools__form__head-line__available-market-currency {
   text-align: right;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: var(--fancy-font);
 }
 
 .order__tools__selection__submit-order__button {
@@ -377,19 +456,17 @@ video.app__background-video {
   flex: 1;
   display: flex;
   flex-direction: column;
+  padding: 10px;
+  background-color: var(--light-transparent-blue);
 }
 
 .positions, .orders {
-  flex: 1;
-  border-top: 1px solid black;
-  border-right: 1px solid black;
-  border-left: 1px solid white;
-  border-bottom: 1px solid white;
-  background: purple;
+  display: flex;
+  flex-direction: column;
 }
 
 .positions {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 @keyframes app-logo-spin {

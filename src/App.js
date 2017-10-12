@@ -9,7 +9,7 @@ class App extends Component {
     return (
       <div className="app">
         <video className="app__background-video" loop autoPlay>
-          <source src="http://design.enter-media.org/upload/iblock/5e4/5e4c2cfea12f0398d79570fd28c37822.webm" type="video/webm" />
+          <source src="background-animation.webm" type="video/webm" />
         </video>
         <header className="app__header">
           <h1 className="app__header__title">coinblock.exchange</h1>
@@ -19,20 +19,20 @@ class App extends Component {
           </div> */}
         </header>
         <div className="app__panel">
-          <div className="coin-info">
+          <div className="coin-info lightup-decoration">
             <img className="coin-info__image" src="ethereum.png" />
             <div className="coin-info__identifier">
               <div className="coin-info__identifier__name">Ethereum</div>
               <input type="text" className="coin-info__identifier__symbol" defaultValue="ETH/BTC" />
             </div>
             <div className="coin-info__values">
-              <div className="coin-info__values__last">
-                <div className="coin-info__values__last__title">Last</div>
-                <div className="coin-info__values__last__value">Ƀ 0.5142344</div>
+              <div className="coin-info__values__price">
+                <div className="coin-info__values__price__title">Price</div>
+                <div className="coin-info__values__price__value">Ƀ 0.06345826</div>
               </div>
               <div className="coin-info__values__volume">
                 <div className="coin-info__values__volume__title">Volume</div>
-                <div className="coin-info__values__volume__value">Ƀ 5132.03</div>
+                <div className="coin-info__values__volume__value">Ƀ 2671.817</div>
               </div>
             </div>
             <div className="coin-info__values__charts">
@@ -40,11 +40,132 @@ class App extends Component {
             </div>
           </div>
           <div className="app__panel__bottom">
-            <div className="tickers">
+            <div className="tickers lightup-decoration">
               <h3>Tickers</h3>
-              <div className="tickers__list"></div>
+              <div className="data__list">
+                <div className="data__list__header">
+                  <div>Symbol</div>
+                  <div>Change</div>
+                  <div>Price</div>
+                </div>
+                <div className="data__list__ticker">
+                  <div>ETH/BTC</div>
+                  <div>+0.04%</div>
+                  <div>0.00158001</div>
+                </div>
+                <div className="data__list__ticker">
+                  <div>MNR/BTC</div>
+                  <div>+0.14%</div>
+                  <div>0.06326500</div>
+                </div>
+                <div className="data__list__ticker">
+                  <div>ZCH/BTC</div>
+                  <div>+0.45%</div>
+                  <div>0.00021834</div>
+                </div>
+                <div className="data__list__ticker">
+                  <div>MON/BTC</div>
+                  <div>+50.41%</div>
+                  <div>0.00167500</div>
+                </div>
+                <div className="data__list__ticker">
+                  <div>PAY/BTC</div>
+                  <div>+130.84%</div>
+                  <div>0.00016483</div>
+                </div>
+                <div className="data__list__ticker">
+                  <div>OMG/BTC</div>
+                  <div>+15.49%</div>
+                  <div>0.00591900</div>
+                </div>
+                <div className="data__list__ticker">
+                  <div>LTC/BTC</div>
+                  <div>+0.94%</div>
+                  <div>0.00021502</div>
+                </div>
+                <div className="data__list__ticker">
+                  <div>NEO/BTC</div>
+                  <div>+7.14%</div>
+                  <div>0.04760010</div>
+                </div>
+                <div className="data__list__ticker">
+                  <div>LSK/BTC</div>
+                  <div>+5.40%</div>
+                  <div>0.00000019</div>
+                </div>
+                <div className="data__list__ticker">
+                  <div>BCC/BTC</div>
+                  <div>+0.74%</div>
+                  <div>0.00004200</div>
+                </div>
+                <div className="data__list__ticker">
+                  <div>ARK/BTC</div>
+                  <div>+0.47%</div>
+                  <div>0.00020625</div>
+                </div>
+                <div className="data__list__ticker">
+                  <div>XRP/BTC</div>
+                  <div>+0.64%</div>
+                  <div>0.00232617</div>
+                </div>
+                <div className="data__list__ticker">
+                  <div>XVG/BTC</div>
+                  <div>+10.54%</div>
+                  <div>0.00000124</div>
+                </div>
+                <div className="data__list__ticker">
+                  <div>XRP/ADA</div>
+                  <div>+0.14%</div>
+                  <div>0.00032617</div>
+                </div>
+                <div className="data__list__ticker">
+                  <div>ARK/BTC</div>
+                  <div>+0.47%</div>
+                  <div>0.00020625</div>
+                </div>
+                <div className="data__list__ticker">
+                  <div>XRP/BTC</div>
+                  <div>+0.64%</div>
+                  <div>0.00232617</div>
+                </div>
+                <div className="data__list__ticker">
+                  <div>XVG/BTC</div>
+                  <div>+10.54%</div>
+                  <div>0.00000124</div>
+                </div>
+                <div className="data__list__ticker">
+                  <div>XRP/ADA</div>
+                  <div>+0.14%</div>
+                  <div>0.00032617</div>
+                </div>
+                <div className="data__list__ticker">
+                  <div>XRP/ADA</div>
+                  <div>+0.14%</div>
+                  <div>0.00032617</div>
+                </div>
+                <div className="data__list__ticker">
+                  <div>ARK/BTC</div>
+                  <div>+0.47%</div>
+                  <div>0.00020625</div>
+                </div>
+                <div className="data__list__ticker">
+                  <div>XRP/BTC</div>
+                  <div>+0.64%</div>
+                  <div>0.00232617</div>
+                </div>
+                <div className="data__list__ticker">
+                  <div>XVG/BTC</div>
+                  <div>+10.54%</div>
+                  <div>0.00000124</div>
+                </div>
+                <div className="data__list__ticker">
+                  <div>XRP/ADA</div>
+                  <div>+0.14%</div>
+                  <div>0.00032617</div>
+                </div>
+              </div>
             </div>
-            <div className="order">
+            <div className="order lightup-decoration">
               <h3>Order</h3>
               <div className="order__tools">
                 <div className="order__tools__selection">
@@ -68,7 +189,7 @@ class App extends Component {
                     </div>
                     <div className="order__tools__form__fields__field">
                       <span className="order__tools__form__fields__field__label">Rate</span>
-                      <input type="text" defaultValue="0.51" />
+                      <input className="order__tools__form__fields__field__rate" type="text" defaultValue="0.06345826" />
                       <span className="order__tools__form__fields__field__currency-abbreviation">Ƀ per unit</span>
                       <a href="#" className="order__tools__form__fields__field__limit">Limit</a>
                       <a href="#" className="order__tools__form__fields__field__market">Market</a>
@@ -85,12 +206,166 @@ class App extends Component {
                 </div>
               </div>
             </div>
-            <div className="positions-and-orders">
-              <h3>Positions</h3>
+            <div className="positions-and-orders lightup-decoration">
               <div className="positions">
+                <h3>Positions</h3>
+                <div className="data__list">
+                  <div className="data__list__header">
+                    <div>Symbol</div>
+                    <div>Change</div>
+                    <div>Price</div>
+                  </div>
+                  <div className="data__list__ticker">
+                    <div>ETH/BTC</div>
+                    <div>+0.04%</div>
+                    <div>0.00158001</div>
+                  </div>
+                  <div className="data__list__ticker">
+                    <div>MNR/BTC</div>
+                    <div>+0.14%</div>
+                    <div>0.06326500</div>
+                  </div>
+                  <div className="data__list__ticker">
+                    <div>ZCH/BTC</div>
+                    <div>+0.45%</div>
+                    <div>0.00021834</div>
+                  </div>
+                  <div className="data__list__ticker">
+                    <div>MON/BTC</div>
+                    <div>+50.41%</div>
+                    <div>0.00167500</div>
+                  </div>
+                  <div className="data__list__ticker">
+                    <div>PAY/BTC</div>
+                    <div>+130.84%</div>
+                    <div>0.00016483</div>
+                  </div>
+                  <div className="data__list__ticker">
+                    <div>OMG/BTC</div>
+                    <div>+15.49%</div>
+                    <div>0.00591900</div>
+                  </div>
+                  <div className="data__list__ticker">
+                    <div>LTC/BTC</div>
+                    <div>+0.94%</div>
+                    <div>0.00021502</div>
+                  </div>
+                  <div className="data__list__ticker">
+                    <div>NEO/BTC</div>
+                    <div>+7.14%</div>
+                    <div>0.04760010</div>
+                  </div>
+                  <div className="data__list__ticker">
+                    <div>LSK/BTC</div>
+                    <div>+5.40%</div>
+                    <div>0.00000019</div>
+                  </div>
+                  <div className="data__list__ticker">
+                    <div>BCC/BTC</div>
+                    <div>+0.74%</div>
+                    <div>0.00004200</div>
+                  </div>
+                  <div className="data__list__ticker">
+                    <div>ARK/BTC</div>
+                    <div>+0.47%</div>
+                    <div>0.00020625</div>
+                  </div>
+                  <div className="data__list__ticker">
+                    <div>XRP/BTC</div>
+                    <div>+0.64%</div>
+                    <div>0.00232617</div>
+                  </div>
+                  <div className="data__list__ticker">
+                    <div>XVG/BTC</div>
+                    <div>+10.54%</div>
+                    <div>0.00000124</div>
+                  </div>
+                  <div className="data__list__ticker">
+                    <div>XRP/ADA</div>
+                    <div>+0.14%</div>
+                    <div>0.00032617</div>
+                  </div>
+                </div>
               </div>
-              <h3>Orders</h3>
               <div className="orders">
+                <h3>Orders</h3>
+                <div className="data__list">
+                  <div className="data__list__header">
+                    <div>Symbol</div>
+                    <div>Change</div>
+                    <div>Price</div>
+                  </div>
+                  <div className="data__list__ticker">
+                    <div>ETH/BTC</div>
+                    <div>+0.04%</div>
+                    <div>0.00158001</div>
+                  </div>
+                  <div className="data__list__ticker">
+                    <div>MNR/BTC</div>
+                    <div>+0.14%</div>
+                    <div>0.06326500</div>
+                  </div>
+                  <div className="data__list__ticker">
+                    <div>ZCH/BTC</div>
+                    <div>+0.45%</div>
+                    <div>0.00021834</div>
+                  </div>
+                  <div className="data__list__ticker">
+                    <div>MON/BTC</div>
+                    <div>+50.41%</div>
+                    <div>0.00167500</div>
+                  </div>
+                  <div className="data__list__ticker">
+                    <div>PAY/BTC</div>
+                    <div>+130.84%</div>
+                    <div>0.00016483</div>
+                  </div>
+                  <div className="data__list__ticker">
+                    <div>OMG/BTC</div>
+                    <div>+15.49%</div>
+                    <div>0.00591900</div>
+                  </div>
+                  <div className="data__list__ticker">
+                    <div>LTC/BTC</div>
+                    <div>+0.94%</div>
+                    <div>0.00021502</div>
+                  </div>
+                  <div className="data__list__ticker">
+                    <div>NEO/BTC</div>
+                    <div>+7.14%</div>
+                    <div>0.04760010</div>
+                  </div>
+                  <div className="data__list__ticker">
+                    <div>LSK/BTC</div>
+                    <div>+5.40%</div>
+                    <div>0.00000019</div>
+                  </div>
+                  <div className="data__list__ticker">
+                    <div>BCC/BTC</div>
+                    <div>+0.74%</div>
+                    <div>0.00004200</div>
+                  </div>
+                  <div className="data__list__ticker">
+                    <div>ARK/BTC</div>
+                    <div>+0.47%</div>
+                    <div>0.00020625</div>
+                  </div>
+                  <div className="data__list__ticker">
+                    <div>XRP/BTC</div>
+                    <div>+0.64%</div>
+                    <div>0.00232617</div>
+                  </div>
+                  <div className="data__list__ticker">
+                    <div>XVG/BTC</div>
+                    <div>+10.54%</div>
+                    <div>0.00000124</div>
+                  </div>
+                  <div className="data__list__ticker">
+                    <div>XRP/ADA</div>
+                    <div>+0.14%</div>
+                    <div>0.00032617</div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
