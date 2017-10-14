@@ -4,6 +4,12 @@ import DepthWebsocketEmitter from './DepthWebsocketEmitter.js';
 import CoinInfo from './CoinInfo.js';
 
 class App extends Component {
+  componentDidMount() {
+    fetch('/users')
+      .then(res => res.json())
+      .then(users => this.setState({ users }));
+  }
+  
   render() {
     return (
       <div className="app">

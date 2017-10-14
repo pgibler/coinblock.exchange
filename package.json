@@ -1,18 +1,33 @@
 {
   "name": "coinblock.exchange",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "private": true,
+  "scripts": {
+    "webpack-watch": "webpack -w",
+    "express-server": "node ./bin/www",
+    "dev": "export NODE_ENV=development || set NODE_ENV=development && concurrent --kill-others \"npm run webpack-watch\" \"npm run express-server\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "dependencies": {
-    "express": "^4.16.2",
-    "morgan": "^1.9.0",
+    "babel-loader": "^7.1.2",
+    "body-parser": "~1.18.2",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "~4.15.5",
+    "jade": "~1.11.0",
+    "morgan": "~1.9.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
-    "react-scripts": "1.0.14"
+    "react-scripts": "1.0.14",
+    "serve-favicon": "~2.4.5",
+    "webpack": "^3.7.1"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "concurrently": "^3.5.0",
+    "css-loader": "^0.28.7"
   }
 }

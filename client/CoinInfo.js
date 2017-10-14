@@ -13,9 +13,21 @@ class CoinInfo extends Component {
   }
 
   render() {
+    const priceComponentClasses = ['coin-info__values__price__value'];
+
+    if(this.state.newPrice) {
+      priceComponentClasses.push('coin-info__values__price__value--update');
+    }
+
+    const volumeComponentClasses = ['coin-info__values__volume__value'];
+
+    if(this.state.newVolume) {
+      volumeComponentClasses.push('coin-info__values__price__value--update');
+    }
+
     return (
       <div className="coin-info lightup-decoration">
-        <img className="coin-info__image" src="ethereum.png" />
+        <img className="coin-info__image" src="/images/ethereum.png" />
         <div className="coin-info__identifier">
           <div className="coin-info__identifier__name">{this.state.name}</div>
           <input type="text" className="coin-info__identifier__symbol" defaultValue="ETH/BTC" />
@@ -23,11 +35,11 @@ class CoinInfo extends Component {
         <div className="coin-info__values">
           <div className="coin-info__values__price">
             <div className="coin-info__values__price__title">Price</div>
-            <div className="coin-info__values__price__value">Ƀ {this.state.price}</div>
+            <div className={priceComponentClasses.join(' ')}>Ƀ {this.state.price}</div>
           </div>
           <div className="coin-info__values__volume">
             <div className="coin-info__values__volume__title">Volume</div>
-            <div className="coin-info__values__volume__value">Ƀ {this.state.volume}</div>
+            <div className={volumeComponentClasses.join(' ')}>Ƀ {this.state.volume}</div>
           </div>
         </div>
         <div className="coin-info__values__charts">

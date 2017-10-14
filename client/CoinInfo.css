@@ -55,11 +55,17 @@
   width: 65px;
 }
 
+@keyframes coin-info__values__change {
+  from {background-color: black;}
+  to {background-color: transparent;}
+}
+
 .coin-info__values__price__value,
 .coin-info__values__volume__value {
   font-size: 32px;
   font-family: var(--fancy-font);
   color: white;
+  animation: coin-info__values__change 2s;
 }
 
 .coin-info__values__charts {
